@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ .Site.Title }}</title>
   </head>
-  <body>
-    <h1>{{ .Title }}</h1>
-    <div>
-      {{ .Content }}
-    </div>
+  <body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 24px;">
+    <h1>{{ .Site.Title }}</h1>
+
+    <p style="opacity:.7;">
+      If you can see this, Hugo is rendering the homepage template.
+    </p>
+
+    {{ with .Content }}
+      <div>{{ . }}</div>
+    {{ else }}
+      <p><strong>No homepage content found.</strong></p>
+      <p>Expected file: <code>content/_index.md</code></p>
+    {{ end }}
   </body>
 </html>
-
