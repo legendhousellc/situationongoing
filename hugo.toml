@@ -1,1 +1,11 @@
+baseURL = "https://wsonews.com/"
+languageCode = "en-us"
+title = "WSO News"
+
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
